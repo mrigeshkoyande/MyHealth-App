@@ -64,6 +64,12 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.6.3")
     implementation("androidx.compose.material3:material3:1.3.2") // avoid version mismatch
 
+    // Google Fonts (downloadable fonts for Compose)
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.6.3")
+
+    // Compose Animation
+    implementation("androidx.compose.animation:animation:1.6.3")
+
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.9.0")
     implementation(libs.androidx.navigation.runtime.ktx)
