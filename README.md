@@ -1,142 +1,257 @@
-🏥 MyHealth App
+# MyHealth App
 
-A modern and intuitive health companion app built using Kotlin, Jetpack Compose, and MVVM Architecture. MyHealth App helps users track daily workouts, monitor nutrition, view personalized dashboards, and maintain healthy habits — all with a clean & polished UI powered by Material Design 3.
-| Category              | Details                                                              |
-| --------------------- | -------------------------------------------------------------------- |
-| 📌 Exercise Tracker   | Log activities, track calories burned, and view progress             |
-| 📊 Dashboard          | Insightful charts and analytics for daily, weekly, and monthly views |
-| 🥗 Nutrition Tracking | Record calorie intake, meal logging, and macro suggestions           |
-| 🎨 UI/UX              | Clean and intuitive user interface using Material Design 3           |
-| 💾 Data Persistence   | Local storage using SharedPreferences                                |
-| 🔧 MVVM Architecture  | Scalable, modular, test-friendly design                              |
-🧰 Tech Stack
+MyHealth App is an Android health companion built with Kotlin, Jetpack Compose, and an MVVM-style structure. It focuses on everyday wellness tracking with a simple interface for workouts, nutrition, dashboards, and personal progress.
 
-Kotlin 2.0
+## Features
 
-Jetpack Compose
+| Area | Details |
+| --- | --- |
+| Exercise Tracking | Log workouts, calories burned, and daily activity progress |
+| Dashboard | View health insights across daily, weekly, and monthly views |
+| Nutrition Tracking | Record meals, calories, and nutrition-related activity |
+| UI | Jetpack Compose UI with Material 3 components |
+| Storage | Local persistence using SharedPreferences |
+| Architecture | Modular structure based on MVVM principles |
 
-Material Design 3
+## Tech Stack
 
-MVVM Architecture
+- Kotlin
+- Jetpack Compose
+- Material 3
+- MVVM architecture
+- SharedPreferences
+- Navigation Compose
+- MPAndroidChart
 
-SharedPreferences
+## Requirements
 
-Android Studio (Giraffe or above)
+- Android Studio with current Android SDK support
+- Android SDK 35
+- Minimum SDK 28
+- Java 11
+- Gradle wrapper included in this repository
 
+## Getting Started
 
-📂 Project Structure
+### 1. Clone the repository
 
-MyHealth-App/
- ├── app/
- │   ├── data/
- │   │   ├── preferences/
- │   │   └── repository/
- │   ├── ui/
- │   │   ├── components/
- │   │   ├── screens/
- │   │   └── theme/
- │   ├── viewmodel/
- │   ├── utils/
- │   └── MainActivity.kt
- └── README.md
-
- 
-🧑‍💻 Getting Started
-✅ Prerequisites
-
-Android Studio Hedgehog / Jellyfish recommended
-
-JDK 17+
-
-Gradle updated via Android Studio
-
-📦 Installation
+```bash
 git clone https://github.com/mrigeshkoyande/MyHealth-App.git
 cd MyHealth-App
+```
 
-▶️ Build & Run
+### 2. Open the project
 
-Open in Android Studio → Select device/emulator → Click Run ▶️
+Open the project folder in Android Studio.
 
-📚 Usage Guide
-| Module               | How to Use                                              |
-| -------------------- | ------------------------------------------------------- |
-| **Exercise Tracker** | Add exercises, duration, difficulty, calories, and save |
-| **Dashboard**        | View progress charts and activity insights              |
-| **Nutrition**        | Record daily food and calorie intake                    |
-| **Settings**         | Modify goals, preferences, and storage data             |
+### 3. Sync Gradle
 
-🗂 Data Persistence
+Wait for Android Studio to finish Gradle sync and download dependencies.
 
-This project uses SharedPreferences to store:
+### 4. Choose a device
 
-User profile
+Use either:
 
-Tracking history
+- an Android emulator, or
+- a physical Android device with USB debugging enabled
 
-Preferences and settings
+### 5. Run the app
 
-Progress indicators
+Click the Run button in Android Studio, or use the Gradle command below.
 
-Future versions will include Room Database for advanced offline data handling.
+## Build Commands
 
-🏗 Architecture
+### Windows
 
-The project follows MVVM + State Management with:
+```powershell
+.\gradlew.bat assembleDebug
+.\gradlew.bat testDebugUnitTest
+```
 
-ViewModel handling business logic
+### macOS / Linux
 
-Composable UI reflecting state changes
+```bash
+./gradlew assembleDebug
+./gradlew testDebugUnitTest
+```
 
-Repository layer separating data sources
+### Other useful commands
 
-Unidirectional Data Flow
+```bash
+./gradlew assembleRelease
+./gradlew connectedAndroidTest
+```
 
-🛠 Build & Deployment
-| Build Type            | Command                          |
-| --------------------- | -------------------------------- |
-| Debug Build           | `./gradlew assembleDebug`        |
-| Release Build         | `./gradlew assembleRelease`      |
-| Unit Testing          | `./gradlew test`                 |
-| Instrumentation Tests | `./gradlew connectedAndroidTest` |
+## Project Structure
 
-🧭 Roadmap
+```text
+app/
+	src/main/
+		java/google/com/myhealth/
+			ui/
+			viewmodel/
+			data/
+			utils/
+		res/
+```
 
- Room Database Integration
+## Usage Overview
 
- AI-based Nutrition Suggestions
+| Module | What You Can Do |
+| --- | --- |
+| Exercise Tracker | Add exercise details, duration, difficulty, and calories |
+| Dashboard | Review progress charts and activity summaries |
+| Nutrition | Record meals and calorie intake |
+| Settings | Update goals and app preferences |
 
- Firebase Backup Support
+## Data Handling
 
- WearOS Smartwatch Companion App
+The app currently stores local data with SharedPreferences, including:
 
- Cloud Sync + Multi-Device Support
+- user profile data
+- tracking history
+- settings and preferences
+- progress values
 
- 🤝 Contributing
+Room can be added later if the project moves toward more complex offline storage.
 
-Contributions are welcome!
+## Architecture Notes
 
-Fork the repo
+The app is organized around:
 
-Create a new feature branch
+- ViewModels for state and business logic
+- Compose UI for rendering state
+- repository-style separation for data access
+- unidirectional data flow where possible
 
-Commit changes
+## Roadmap
 
-Submit a pull request
+- Room database integration
+- AI-based nutrition suggestions
+- Firebase backup support
+- Wear OS companion support
+- Cloud sync across devices
 
-📄 License
+## Contributing
 
-This project is licensed under the MIT License.
-Feel free to modify and build upon it.
+Contributions are welcome. The best way to make it easy for others to review your work is to follow a clear step-by-step process.
 
-📬 Support & Contact
+### Step-by-step contribution flow
 
-🔗 GitHub Repo:
-https://github.com/mrigeshkoyande/MyHealth-App
+#### 1. Check existing issues
 
-If you encounter issues, open an Issue Ticket on the repository.
+Look through open issues first. If your change is not already tracked, open an issue describing:
 
-⭐ If you found this useful, please consider giving the repo a star!
+- the problem
+- the proposed fix or feature
+- screenshots if the change is UI-related
+
+#### 2. Fork the repository
+
+Create your own fork on GitHub, then clone it locally.
+
+```bash
+git clone https://github.com/<your-username>/MyHealth-App.git
+cd MyHealth-App
+```
+
+#### 3. Create a branch
+
+Use a focused branch name that describes the work.
+
+```bash
+git checkout -b feature/add-water-tracker
+```
+
+Examples:
+
+- `feature/add-dashboard-card`
+- `fix/nutrition-summary-bug`
+- `docs/update-readme`
+
+#### 4. Make small, focused changes
+
+Keep the scope limited to one feature, one bug fix, or one documentation update per pull request.
+
+Good contribution areas:
+
+- bug fixes
+- UI polish
+- code cleanup
+- test improvements
+- README and documentation updates
+- performance improvements
+
+#### 5. Test before opening a pull request
+
+Run the relevant checks locally.
+
+```bash
+./gradlew assembleDebug
+./gradlew testDebugUnitTest
+```
+
+On Windows:
+
+```powershell
+.\gradlew.bat assembleDebug
+.\gradlew.bat testDebugUnitTest
+```
+
+If you changed UI behavior, include screenshots or a short screen recording in your pull request.
+
+#### 6. Commit with a clear message
+
+Use short, descriptive commit messages.
+
+```bash
+git commit -m "Add nutrition summary validation"
+```
+
+Better commit examples:
+
+- `Fix dashboard crash on empty state`
+- `Add reusable health stat card`
+- `Update README contribution guide`
+
+#### 7. Push your branch
+
+```bash
+git push origin feature/add-water-tracker
+```
+
+#### 8. Open a pull request
+
+Your pull request should explain:
+
+- what changed
+- why it changed
+- how it was tested
+- whether screenshots are included for UI changes
+
+#### 9. Respond to review feedback
+
+Keep the same branch updated and reply to review comments directly. Small follow-up commits are fine.
+
+## Pull Request Checklist
+
+Before submitting, make sure that:
+
+- the app builds successfully
+- tests related to your change pass
+- the change is limited in scope
+- code style matches the existing project
+- UI updates include screenshots when helpful
+- the pull request description explains the change clearly
+
+## Support
+
+Repository: https://github.com/mrigeshkoyande/MyHealth-App
+
+If you find a bug or want to suggest an improvement, open an issue in the repository.
+
+## Screenshots
+
 ![IMG-20251126-WA0015](https://github.com/user-attachments/assets/abc53752-1430-4a8e-adf3-c94ba75c4955)
 ![IMG-20251126-WA0012](https://github.com/user-attachments/assets/c04329f7-dd42-44c9-9339-ba989cc812ea)
 ![IMG-20251126-WA0014](https://github.com/user-attachments/assets/5f5ae5ef-a064-48d0-9d11-870c8eebc350)
